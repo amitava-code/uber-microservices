@@ -3,8 +3,21 @@ const morgan = require('morgan')
 const app = express()
 app.use(morgan('dev'))
 
-app.get('/',(req, res)=>{
-    res.send('hello world')
+
+
+app.get('/', (re,res)=>{
+    for(let i=0; i<100000 ; i++){
+
+    }
+    res.send('Hello World')
+})
+
+
+app.get('/stress-test', (re,res)=>{
+    for(let i=0; i<100000 ; i++){
+
+    }
+    res.send('Hello World')
 })
 
 
